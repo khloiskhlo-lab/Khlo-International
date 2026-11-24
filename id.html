@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My ID · Khlo Int.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="id" class="idbg">
+  <a class="circle" href="loading.html" data-fly aria-label="Continue to departures">→</a>
+  <div class="idwrap">
+    <div class="folder">
+      <div class="inner">
+        <div class="idrow">
+          <div class="photo" id="ph"><img id="phimg" alt="Your photo"><span>tap to add photo</span></div>
+          <div class="tbl">
+            <label class="c"><span>name:</span><input id="fName" maxlength="24" autocomplete="off"></label>
+            <label class="c"><span>gender:</span><select id="fG"><option value=""></option><option>F</option><option>M</option><option>X</option></select></label>
+            <label class="c"><span>date of birth:</span><input id="fDob" type="date"></label>
+            <div class="c"><span>age:</span><b id="age"></b></div>
+            <label class="c b"><span>birthplace:</span><input id="fBp" maxlength="24" autocomplete="off"></label>
+            <label class="c t"><span>nationality:</span><input id="fNat" maxlength="20" autocomplete="off"></label>
+            <div class="c s"><span>signature:</span><button id="clr" type="button">clear</button><canvas id="sig"></canvas></div>
+          </div>
+        </div>
+        <div class="foot"><button class="save" id="save">save</button><span>expires: <b id="exp">XX XX XXXX</b></span></div>
+      </div>
+    </div>
+  </div>
+  <input type="file" id="file" accept="image/*" hidden>
+  <script src="app.js"></script>
+</body>
+</html>
