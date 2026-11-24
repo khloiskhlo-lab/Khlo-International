@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Khlo Int.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="landing">
+  <main class="land" style="position:relative">
+    <div class="art">
+      <svg viewBox="0 0 900 720" role="img" aria-label="A golden globe with a plane flying around it">
+        <defs>
+          <clipPath id="gc"><circle cx="60" cy="400" r="326"/></clipPath>
+          <symbol id="pl" viewBox="0 0 64 56"><path d="M3 24H50C60 24 64 27 64 28S60 32 50 32H3Z M30 26L16 3H24L46 26Z M30 30L16 53H24L46 30Z M3 25L1 15H7L15 25Z M3 31L1 41H7L15 31Z"/></symbol>
+        </defs>
+        <g clip-path="url(#gc)">
+          <g fill="#f8a614">
+            <path d="M-150 230Q-60 150 70 190Q150 160 220 215Q300 240 330 300Q290 350 220 330Q180 380 100 350Q40 400 -40 360Q-130 340 -150 290Z"/>
+            <path d="M-110 400Q-30 380 40 410Q110 400 130 470Q120 560 70 640Q20 700 -20 650Q-70 560 -90 480Q-130 440 -110 400Z"/>
+            <path d="M250 420Q320 410 350 470Q340 520 300 540Q270 500 250 470Z"/>
+            <path d="M170 560Q220 540 250 580Q230 620 190 610Z"/>
+            <animateTransform attributeName="transform" type="translate" values="0 0;46 0;0 0" dur="16s" repeatCount="indefinite"/>
+          </g>
+        </g>
+        <g fill="none" stroke="#f8a614" stroke-width="16">
+          <circle cx="60" cy="400" r="340"/>
+          <ellipse cx="60" cy="400" rx="340" ry="120"/>
+          <ellipse cx="60" cy="400" rx="150" ry="340"/>
+        </g>
+        <path class="orbit" d="M 300 200 A 280 95 0 1 1 860 200 A 280 95 0 1 1 300 200Z"/>
+        <g>
+          <use href="#pl" x="-85" y="-74" width="170" height="148" fill="#ffb900"/>
+          <animateMotion dur="13s" repeatCount="indefinite" rotate="auto" path="M 300 200 A 280 95 0 1 1 860 200 A 280 95 0 1 1 300 200Z"/>
+        </g>
+      </svg>
+    </div>
+    <div class="txt">
+      <small>welcome to</small>
+      <h1>KHLO INT.</h1>
+      <div class="cta">
+        <a class="btn" href="id.html">My ID</a>
+        <a class="btn" href="loading.html" data-fly>Departures</a>
+      </div>
+    </div>
+    <p class="tag" style="left:26vw;bottom:5vh">“where we do it best”</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
