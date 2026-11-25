@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b59">
+  <title>Seat assignment — KHLO'S INT.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/seat.js" defer></script>
+</head>
+<body class="blue-page seat-page">
+  <header class="site-header">
+    <a class="brand brand-light" href="index.html">KHLO'S <span>INT.</span></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="departures.html">Departures</a>
+      <a href="entertainment.html">Entertainment</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <div class="section-heading">
+      <p class="eyebrow">BOARDING GROUP / SEAT ALLOCATION</p>
+      <h1>FIND YOUR SEAT.</h1>
+      <p class="muted-light">Your seat has been randomly assigned. May the odds be ever in your favour.</p>
+    </div>
+
+    <div class="seat-layout">
+      <section class="cabin-panel">
+        <div class="cabin-label">
+          <span>FRONT OF AIRCRAFT</span>
+          <span>✈</span>
+        </div>
+
+        <div class="seat-map" id="seat-map" aria-label="Aircraft seat map">
+          <div class="seat-row">
+            <span class="row-number">12</span>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+            <div class="aisle"></div>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+          </div>
+          <div class="seat-row">
+            <span class="row-number">13</span>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+            <div class="aisle"></div>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+          </div>
+          <div class="seat-row">
+            <span class="row-number">14</span>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+            <div class="aisle"></div>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+          </div>
+          <div class="seat-row">
+            <span class="row-number">15</span>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+            <div class="aisle"></div>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+          </div>
+          <div class="seat-row">
+            <span class="row-number">16</span>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+            <div class="aisle"></div>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+          </div>
+          <div class="seat-row">
+            <span class="row-number">17</span>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+            <div class="aisle"></div>
+            <div class="seat-group"><i></i><i></i><i></i></div>
+          </div>
+          <div class="seat-legend">
+            <span><i class="legend-seat"></i> AVAILABLE</span>
+            <span><i class="legend-seat chosen"></i> YOUR SEAT</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="seat-result" aria-live="polite">
+        <p class="eyebrow">YOUR ASSIGNED SEAT</p>
+        <div class="seat-number" id="seat-number">—</div>
+        <h2 id="seat-type">SEAT PENDING</h2>
+        <p class="seat-subtitle" id="seat-subtitle">Let's see what fate has planned.</p>
+        <div class="seat-scenario" id="seat-scenario">Your boarding pass is being prepared...</div>
+        <button class="button button-gold" id="assign-seat" type="button">ASSIGN MY SEAT ↗</button>
+        <p class="small-note">Your assigned seat is remembered in this browser. Reassigning it will replace your previous seat.</p>
+        <a class="text-link" href="entertainment.html">Settled? Browse in-flight entertainment →</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer footer-dark">
+    <span>SEAT MAP // CABIN 01</span>
+    <span><a href="departures.html">BACK TO DEPARTURES</a></span>
+  </footer>
+</body>
+</html>
