@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b111a">
+  <title>In-flight entertainment — KHLO'S INT.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/music-data.js" defer></script>
+  <script src="js/entertainment.js" defer></script>
+</head>
+<body class="console-page">
+  <header class="console-topbar">
+    <a class="console-menu" href="departures.html">‹ MENU</a>
+    <p>SWIPE, SCROLL OR SELECT TO EXPLORE</p>
+    <a class="console-gear" href="id.html" aria-label="Passenger settings">⚙</a>
+  </header>
+
+  <main class="console-layout">
+    <aside class="console-sidebar">
+      <p class="console-sidebar-title">CATEGORIES</p>
+      <div class="console-categories" id="console-categories">
+        <button class="category-button active" data-filter="all">All albums</button>
+        <button class="category-button" data-filter="favourites">Favourites <span>☆</span></button>
+
+        <span class="category-label">GENRES</span>
+        <button class="category-button" data-filter="Dream Pop">Dream pop</button>
+        <button class="category-button" data-filter="Rock">Rock</button>
+        <button class="category-button" data-filter="Post-hardcore">Post-hardcore</button>
+
+        <span class="category-label">DECADES</span>
+        <button class="category-button" data-filter="1970s">1970s</button>
+        <button class="category-button" data-filter="1980s">1980s</button>
+        <button class="category-button" data-filter="2010s">2010s</button>
+
+        <span class="category-label">MOODS</span>
+        <button class="category-button" data-filter="Dreamy">Dreamy</button>
+        <button class="category-button" data-filter="Nostalgic">Nostalgic</button>
+        <button class="category-button" data-filter="Energetic">Energetic</button>
+      </div>
+      <div class="sidebar-bottom"><span class="console-status-light"></span> ENTERTAINMENT SYSTEM ONLINE</div>
+    </aside>
+
+    <section class="console-main">
+      <div class="console-heading">
+        <div>
+          <p class="eyebrow">IN-FLIGHT ENTERTAINMENT / MUSIC</p>
+          <h1>THE SOUND CABIN</h1>
+          <p>Pick an album, then choose a track for your flight.</p>
+          <a class="console-playlist-link" href="playlist.html">OPEN PLAYLIST STUDIO ↗</a>
+        </div>
+        <div class="passenger-chip" id="console-passenger">PASSENGER</div>
+      </div>
+
+      <div class="console-feature">
+        <div>
+          <span class="feature-kicker">NOW BOARDING</span>
+          <h2>YOUR NEXT<br>LISTEN.</h2>
+          <p>Albums, artists and songs for wherever your mind wanders.</p>
+        </div>
+        <div class="equaliser" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+
+      <div class="album-section-heading">
+        <h2 id="album-section-title">FEATURED ALBUMS</h2>
+        <span id="album-count">03 ALBUMS</span>
+      </div>
+
+      <div class="album-carousel-wrap">
+        <div class="album-grid" id="album-grid"></div>
+      </div>
+
+      <p class="console-hint">TIP: SELECT AN ALBUM TO OPEN ITS TRACK LIST. FAVOURITE AN ALBUM WITH THE STAR.</p>
+    </section>
+  </main>
+
+  <footer class="console-footer">
+    <a href="departures.html">‹ DEPARTURES</a>
+    <span>KHLO'S INT. // ENTERTAINMENT TERMINAL</span>
+    <a href="seat.html">MY SEAT ↗</a>
+  </footer>
+</body>
+</html>
