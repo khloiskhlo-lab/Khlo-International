@@ -1,21 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Departures · Khlo Int.</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061018">
+  <title>Departures — KHLO'S INT.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/departures.js" defer></script>
 </head>
-<body data-page="departures" style="background:#000">
-  <main class="dep">
-    <header class="dh">
-      <div class="ico" data-plane></div>
-      <div class="ti"><h1>DEPARTURES</h1><p>KHLO'S INTERNATIONAL AIRPORT</p></div>
-      <div class="clk"><b id="clock">--:--</b><small id="date"></small></div>
-    </header>
-    <div class="dt head"><span>TIME</span><span>DESTINATION</span><span style="text-align:center">GATE</span><span style="text-align:center">REMARKS</span></div>
-    <div id="rows"></div>
+<body class="terminal-page">
+  <header class="site-header terminal-header">
+    <a class="brand brand-light" href="index.html">KHLO'S <span>INT.</span></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="id.html">Passenger ID</a>
+      <a href="seat.html">Seat assignment</a>
+      <a href="entertainment.html">In-flight entertainment</a>
+    </nav>
+  </header>
+
+  <main class="departures-shell">
+    <div class="departure-topline">
+      <div class="departure-brand">
+        <div class="plane-square">✈</div>
+        <div>
+          <p class="eyebrow">KHLO'S INTERNATIONAL AIRPORT</p>
+          <h1>DEPARTURES</h1>
+          <p class="terminal-subtitle">YOUR NEXT STOP IS WAITING.</p>
+        </div>
+      </div>
+      <div class="clock-block">
+        <time id="airport-clock">--:--</time>
+        <span id="airport-date">LOCAL TERMINAL TIME</span>
+      </div>
+    </div>
+
+    <div class="board-note">
+      <span><i class="live-dot"></i> LIVE-STYLE DEPARTURE BOARD</span>
+      <span>FLIGHT INFORMATION IS PART OF THE EXPERIENCE — NOT REAL TRAVEL DATA.</span>
+    </div>
+
+    <div class="departure-board-wrap">
+      <div class="board-column-head">
+        <span>TIME</span>
+        <span>DESTINATION</span>
+        <span>GATE</span>
+        <span>REMARKS</span>
+        <span></span>
+      </div>
+      <div id="departure-rows" class="departure-rows" aria-live="polite"></div>
+    </div>
+
+    <div class="board-bottom">
+      <span>PLEASE LISTEN FOR YOUR FLIGHT NUMBER.</span>
+      <span>BOARD AUTO-UPDATES AS DEPARTURE TIME APPROACHES.</span>
+    </div>
+
+    <section class="quick-services">
+      <a class="service-card" href="seat.html">
+        <span class="service-icon">▦</span>
+        <span><b>SEAT ASSIGNMENT</b><small>Find out where you're sitting.</small></span>
+        <span class="service-arrow">↗</span>
+      </a>
+      <a class="service-card" href="entertainment.html">
+        <span class="service-icon">♫</span>
+        <span><b>IN-FLIGHT ENTERTAINMENT</b><small>Choose something for the journey.</small></span>
+        <span class="service-arrow">↗</span>
+      </a>
+      <a class="service-card" href="id.html">
+        <span class="service-icon">▤</span>
+        <span><b>PASSENGER ID</b><small>Update your passenger details.</small></span>
+        <span class="service-arrow">↗</span>
+      </a>
+    </section>
   </main>
-  <script src="app.js"></script>
+
+  <footer class="site-footer footer-dark">
+    <span>KHLO'S INT. // TERMINAL A</span>
+    <span><a href="index.html">RETURN TO HOME</a></span>
+  </footer>
 </body>
 </html>
