@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b111a">
+  <title>Playlist Studio — KHLO'S INT.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/music-data.js" defer></script>
+  <script src="js/playlist.js" defer></script>
+</head>
+<body class="console-page playlist-page">
+  <header class="console-topbar">
+    <a class="console-menu" href="departures.html">‹ DEPARTURES</a>
+    <p>PLAYLIST STUDIO / MIX YOUR OWN FLIGHT</p>
+    <a class="console-gear" href="entertainment.html" aria-label="Open music library">♫</a>
+  </header>
+
+  <main class="playlist-shell">
+    <section class="playlist-intro">
+      <p class="eyebrow">GATE B45 / SOUND DESIGN</p>
+      <h1>MAKE A<br><span>SOUNDTRACK.</span></h1>
+      <p>Collect songs, give your playlist a name, and save it for this visit.</p>
+    </section>
+
+    <div class="playlist-workspace">
+      <section class="song-picker">
+        <div class="playlist-panel-heading">
+          <h2>THE MUSIC LIBRARY</h2>
+          <span>SELECT TRACKS</span>
+        </div>
+        <input id="song-search" class="song-search" type="search" placeholder="Search songs or artists…" aria-label="Search songs or artists">
+        <div id="available-songs" class="available-songs"></div>
+      </section>
+
+      <section class="playlist-builder">
+        <div class="playlist-panel-heading">
+          <h2>YOUR MIX</h2>
+          <span id="selected-count">0 TRACKS</span>
+        </div>
+
+        <label class="field-label playlist-field-label" for="playlist-name">PLAYLIST NAME</label>
+        <input id="playlist-name" class="playlist-name-input" maxlength="36" placeholder="e.g. songs for the long way home">
+
+        <label class="field-label playlist-field-label" for="playlist-mood">THE MOOD</label>
+        <select id="playlist-mood" class="playlist-select">
+          <option>Dreamy</option>
+          <option>Nostalgic</option>
+          <option>Energetic</option>
+          <option>Melancholic</option>
+          <option>Unspecified</option>
+        </select>
+
+        <ol id="selected-songs" class="selected-songs">
+          <li class="empty-mix">Your songs will appear here. Go on, pick a few.</li>
+        </ol>
+
+        <button id="save-playlist" class="button button-gold playlist-save" type="button">SAVE MY PLAYLIST ↗</button>
+        <p id="playlist-message" class="playlist-message" aria-live="polite">Your saved mix stays in this browser.</p>
+        <div id="saved-playlist" class="saved-playlist" hidden></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="console-footer">
+    <a href="entertainment.html">‹ MUSIC LIBRARY</a>
+    <span>KHLO'S INT. // PLAYLIST STUDIO</span>
+    <a href="departures.html">DEPARTURES ↗</a>
+  </footer>
+</body>
+</html>
