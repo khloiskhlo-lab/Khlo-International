@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#091724">
+  <title>Now playing — KHLO'S INT.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/music-data.js" defer></script>
+  <script src="js/player.js" defer></script>
+</head>
+<body class="player-page">
+  <header class="player-header">
+    <a class="console-menu" href="entertainment.html">‹ BACK TO MUSIC</a>
+    <span>NOW PLAYING / CABIN AUDIO</span>
+    <a class="console-menu" href="departures.html">DEPARTURES ↗</a>
+  </header>
+
+  <main class="player-shell">
+    <section class="player-album-side">
+      <div class="cover-art cover-large" id="player-cover">
+        <span class="cover-topline">KHLO'S INT. SELECTS</span>
+        <span class="cover-mark">♫</span>
+        <span class="cover-bottomline">IN-FLIGHT LIBRARY</span>
+      </div>
+      <p class="player-category" id="player-genre">ALBUM</p>
+    </section>
+
+    <section class="player-info">
+      <p class="eyebrow">YOUR SELECTED DESTINATION</p>
+      <h1 id="player-title">LOADING ALBUM…</h1>
+      <p class="player-artist" id="player-artist"></p>
+      <div class="player-meta" id="player-meta"></div>
+
+      <div class="track-heading">
+        <h2>TRACK LIST</h2>
+        <span id="track-total">— TRACKS</span>
+      </div>
+      <ol class="track-list" id="track-list"></ol>
+
+      <section class="audio-load-panel">
+        <div>
+          <b id="audio-track-label">SELECT A TRACK TO BEGIN</b>
+          <p>To hear audio, choose a music file saved on your device. Files are played locally in your browser.</p>
+        </div>
+        <label class="button button-outline file-button" for="audio-upload">LOAD AUDIO FILE</label>
+        <input id="audio-upload" type="file" accept="audio/*" hidden>
+      </section>
+
+      <audio id="audio-player" controls preload="none"></audio>
+      <p class="audio-note" id="audio-note">No audio file loaded yet. Track names and album information are examples you can edit in <code>js/music-data.js</code>.</p>
+    </section>
+  </main>
+
+  <footer class="console-footer">
+    <a href="entertainment.html">‹ ALL ALBUMS</a>
+    <span>LISTEN RESPONSIBLY / ENJOY THE FLIGHT</span>
+    <a href="seat.html">MY SEAT ↗</a>
+  </footer>
+</body>
+</html>
