@@ -1,33 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>My ID · Khlo Int.</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b59">
+  <title>Passenger ID — KHLO'S INT.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/id.js" defer></script>
 </head>
-<body data-page="id" class="idbg">
-  <a class="circle" href="loading.html" data-fly aria-label="Continue to departures">→</a>
-  <div class="idwrap">
-    <div class="folder">
-      <div class="inner">
-        <div class="idrow">
-          <div class="photo" id="ph"><img id="phimg" alt="Your photo"><span>tap to add photo</span></div>
-          <div class="tbl">
-            <label class="c"><span>name:</span><input id="fName" maxlength="24" autocomplete="off"></label>
-            <label class="c"><span>gender:</span><select id="fG"><option value=""></option><option>F</option><option>M</option><option>X</option></select></label>
-            <label class="c"><span>date of birth:</span><input id="fDob" type="date"></label>
-            <div class="c"><span>age:</span><b id="age"></b></div>
-            <label class="c b"><span>birthplace:</span><input id="fBp" maxlength="24" autocomplete="off"></label>
-            <label class="c t"><span>nationality:</span><input id="fNat" maxlength="20" autocomplete="off"></label>
-            <div class="c s"><span>signature:</span><button id="clr" type="button">clear</button><canvas id="sig"></canvas></div>
-          </div>
-        </div>
-        <div class="foot"><button class="save" id="save">save</button><span>expires: <b id="exp">XX XX XXXX</b></span></div>
-      </div>
+<body class="blue-page">
+  <header class="site-header">
+    <a class="brand brand-light" href="index.html">KHLO'S <span>INT.</span></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="departures.html">Departures</a>
+      <a href="seat.html">My seat</a>
+    </nav>
+  </header>
+
+  <main class="page-shell id-shell">
+    <div class="section-heading">
+      <p class="eyebrow">CHECK-IN / PASSENGER SERVICES</p>
+      <h1>YOUR PASSENGER ID</h1>
+      <p class="muted-light">A little introduction before take-off.</p>
     </div>
-  </div>
-  <input type="file" id="file" accept="image/*" hidden>
-  <script src="app.js"></script>
+
+    <div class="id-layout">
+      <section class="id-card" aria-label="Passenger ID form">
+        <div class="id-card-top">
+          <span>KHLO'S INTERNATIONAL</span>
+          <span class="id-chip">✦ PASSENGER ✦</span>
+        </div>
+
+        <div class="id-card-body">
+          <div class="id-photo" aria-hidden="true">
+            <div class="id-avatar">✈</div>
+            <span>TRAVELLER<br>PORTRAIT</span>
+          </div>
+
+          <form id="passenger-form" class="id-form">
+            <label class="field-label" for="preferred-name">PREFERRED NAME <span>*</span></label>
+            <input id="preferred-name" name="preferredName" maxlength="24" placeholder="What should we call you?" autocomplete="nickname" required>
+
+            <label class="field-label" for="travel-interest">WHAT ARE YOU MOST EXCITED TO EXPLORE?</label>
+            <select id="travel-interest" name="interest">
+              <option value="Music">Music</option>
+              <option value="Art & creativity">Art & creativity</option>
+              <option value="Film">Film</option>
+              <option value="Words & thoughts">Words & thoughts</option>
+              <option value="The world">The world</option>
+              <option value="A little bit of everything" selected>A little bit of everything</option>
+            </select>
+
+            <label class="field-label" for="signature">SIGNATURE / ALIAS <span class="optional">OPTIONAL</span></label>
+            <input id="signature" name="signature" maxlength="28" placeholder="Your passenger signature">
+
+            <button class="button button-violet" type="submit">SAVE MY ID <span aria-hidden="true">→</span></button>
+            <p class="form-note">Only your preferred name and choices are saved in this browser. No account is created.</p>
+          </form>
+        </div>
+
+        <div class="id-card-bottom">
+          <span>ID: <b id="preview-id">KHI—0000</b></span>
+          <span>VALID FOR THE JOURNEY</span>
+        </div>
+      </section>
+
+      <aside class="id-explainer">
+        <span class="round-icon">✦</span>
+        <p class="eyebrow">A PERSONAL PASS</p>
+        <h2>Make yourself at home.</h2>
+        <p>Your ID lets the airport greet you by your preferred name and remember your seat. Your selected interests can help shape the little details of your visit.</p>
+        <p class="small-note">No real passport details needed. This is a creative passenger pass, not an official identity document.</p>
+        <a class="text-link" href="departures.html">Already checked in? View departures →</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer footer-dark">
+    <span>PASSENGER SERVICES</span>
+    <span><a href="index.html">BACK TO TERMINAL HOME</a></span>
+  </footer>
 </body>
 </html>
